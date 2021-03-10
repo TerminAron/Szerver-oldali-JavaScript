@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+}
+
+body {
+
+    font-size: 18px;
+    color: #666;
+}
+
+
+a {
+    color: #9c3;
+}
+
+a:hover {
+    color: #769e26;
+    text-decoration: none;
+}
+
+.mdb{
+    font-size: 35px;
+}
+.logo{
+    font-size: 35px !important;
+}
+
+h1, h2 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 700;
+}
+.open{
+    text-align: center;
+}
+
+h1 {
+    font-size: 34px;
+    color: #404040;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+}
+.active .nav-link{
+    color: #9c3 !important;
+}
+.footer-style{
+    background-color: black;
+    color: white;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+
+
+}
+i{
+    font-size: 20px;
+}
+.mdb-footer{
+    vertical-align: middle;
+    font-size: 15px;
+}
