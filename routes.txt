@@ -1,0 +1,65 @@
+Állatmenhelyek és azokhoz tartozó gazdira váró állatok
+-index.html - bemutatkozás, menhely táblázat oldalára irányító gomb
+-AnimalHome.html - menhely táblázat (edit, delete, állat lista gomb), új menhely gomb
+-EditAnimalHome.html - menhely edit + cancel
+-NewAnimalHome.html - menhely save + cancel
+-Animals.html - állat táblázat edit + delete, új állat gomb
+-EditAnimal.html - állat edit + cancel
+-NewAnimal.html - állat save + cancel
+
+Routing
+
+renderMW
+
+middleware/menhely/
+    getMenhelyekMW
+    getMenhelyMW
+    saveMenhelyMW
+    delMenhelyMW
+
+middleware/allat/
+    getAllatokMW
+    getAllatMW
+    saveAllatMW
+    delAllatMW
+
+GET /                                        - index.html
+    renderMW(index.html)
+
+GET /menhelyek                               - AnimalHome.html
+    getMenhelyekMW
+    renderMW(AnimalHome.html)
+
+GET,POST /menhelyek/new                      - NewAnimalHome.html
+    saveMenhelyMW
+    renderMW(NewAnimalHome.html)
+
+GET,POST /menhelyek/edit/:menhelyid          - EditAnimalHome.html
+    getMenhelyMW
+    saveMenhelyMW
+    renderMW(EditAnimalHome.html)
+
+GET /menhelyek/del/:menhelyid
+    getMenhelyMW
+    delMenhelyMW
+
+GET /allatok/:menhelyid                      - Animals.html
+    getMenhelyMW
+    getAllatokMW
+    renderMW(Animals.html)
+
+GET,POST /allatok/:menhelyid/new             - NewAnimal.html
+    getMenhelyMW
+    saveAllatMW
+    renderMW(NewAnimal.html)
+
+GET,POST /allatok/:menhelyid/edit/:allatid   - EditAnimal.html
+    getMenhelyMW
+    getAllatMW
+    saveAllatMW
+    renderMW(EditAnimal.html)
+
+GET /allatok/:menhelyid/del/:allatid
+    getMenhelyMW
+    getAllatMW
+    delAllatMW

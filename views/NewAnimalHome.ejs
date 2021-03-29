@@ -1,0 +1,44 @@
+<%- include('header') -%>
+<%- include('menu') -%>
+
+<section id="main">
+    <div class="container pt-3">
+        <h2>Új menhely felvétele</h2>
+        <form method="POST">
+
+            <div class="col-md-6 pt-2">
+                <label for="inputName" class="form-label">Intézmény neve</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Kiskutya ház" name="name" value="">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputZip" class="form-label">Irányítószám</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="1234" name="pcode" value="">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputCity" class="form-label">Város</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="Nekeresd" name="city" value="">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputAddress" class="form-label">Cím</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Kossuth utca 4." name="address" value="">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputPhonenum" class="form-label">Telefonszám</label>
+                <input type="tel" class="form-control" id="inputPhonenum" placeholder="0123456789" name="phone" value="">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="email" value="">
+            </div>
+
+            <div class="col-12 pt-2">
+                <input type="submit" href="/menhelyek" class="btn btn-primary btn-lg" value="Mentés"/>
+                <a href="/menhelyek" class="btn btn-danger btn-lg">Mégse</a>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+<%- include('footer') -%>

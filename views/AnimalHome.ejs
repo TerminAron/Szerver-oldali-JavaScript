@@ -1,0 +1,70 @@
+<%- include('header') -%>
+<%- include('menu') -%>
+
+<section id="main">
+    <div class="container py-5">
+        <a href="/menhelyek/new" class="btn btn-primary btn-lg">Új menhely felvétele</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Menhelyek</h2>
+                <table class="table table-striped table-bordered">
+                <tr>
+                    <th>
+                        Intézmény neve
+                    </th>
+                    <th>
+                        Ir.szám
+                    </th>
+                    <th>
+                        Város
+                    </th>
+                    <th>
+                        Cím
+                    </th>
+                    <th>
+                        Telefon
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                 <% menhelyek.forEach(function(egyMenhely){%>
+                        <tr>
+                            <td>
+                                <%= egyMenhely.name %>
+                            </td>
+                            <td>
+                                <%= egyMenhely.pcode %>
+                            </td>
+                            <td>
+                                <%= egyMenhely.city %>
+                            </td>
+                            <td>
+                                <%= egyMenhely.address %>
+                            </td>
+                            <td>
+                                <%= egyMenhely.phone %>
+                            </td>
+                            <td>
+                                <%= egyMenhely.email %>
+                            </td>
+                            <td>
+                                <a href="/menhelyek/edit/<%= egyMenhely._id %>" class="btn btn-primary">Szerkeszt</a>
+                                <a href="#" class="btn btn-danger">Töröl</a>
+                                <a href="/Animals.html" class="btn btn-info">Állatok</a>
+                            </td>
+                        </tr>
+
+                <% }); %>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('footer') -%>

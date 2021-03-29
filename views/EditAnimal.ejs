@@ -1,0 +1,35 @@
+<%- include('header') -%>
+<%- include('menu') -%>
+
+<section id="main">
+    <div class="container pt-3">
+        <h2>Állat módosítása</h2>
+        <form>
+            <div class="col-md-6 pt-2">
+                <label for="inputName" class="form-label">Név</label>
+                <input type="text" class="form-control" id="inputName">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputRace" class="form-label">Faj</label>
+                <input type="text" class="form-control" id="inputRace">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputSpecies" class="form-label">Fajta</label>
+                <input type="text" class="form-control" id="inputSpecies">
+            </div>
+            <div class="col-md-6 pt-2">
+                <label for="inputAge" class="form-label">Kor</label>
+                <input type="number" class="form-control" id="inputAge">
+            </div>
+
+            <div class="col-12 pt-2">
+                <a href="/Animals.html" class="btn btn-primary btn-lg"><i class="fas fa-save"></i></a>
+                <a href="/Animals.html" class="btn btn-danger btn-lg"><i class="fas fa-window-close"></i></a>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+<%- include('footer') -%>
