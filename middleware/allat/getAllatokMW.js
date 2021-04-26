@@ -4,18 +4,22 @@
 const requireOption = require('../requireOption');
 
 module.exports = function (objectrepository) {
+    const AnimalModel = requireOption(objectrepository, 'AnimalModel');
+
     return function (req, res, next) {
-        res.locals.allatok = [
-            {
-                _id: 'id1',
-                nev: 'Bl',
-                faj: 'Kdfg',
-                fajta: 'df',
-                kor: '5',
+        if (typeof res.locals.menhely === 'undefined') {
+            return next();
+        }
+
+        AnimalModel.find({ _fendfor: req.params.menhelyid}, (err, allatok) => {
+            if (err) {
+                return next(err);
             }
 
-        ];
+            res.locals.allatok = allatok;
+            return next();
 
-        next();
+        });
+        
     };
 };

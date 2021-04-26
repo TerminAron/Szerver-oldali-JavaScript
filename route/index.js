@@ -8,8 +8,11 @@ const getMenhelyekMW = require('../middleware/menhely/getMenhelyekMW');
 const getMenhelyMW = require('../middleware/menhely/getMenhelyMW');
 const saveMenhelyMW = require('../middleware/menhely/saveMenhelyMW');
 
+const AnimalHomeModel = require('../models/animalhome');
+const AnimalModel = require('../models/animal');
+
 module.exports = function (app) {
-    const objRepo = {};
+    const objRepo = {AnimalHomeModel: AnimalHomeModel, AnimalModel: AnimalModel};
 
     app.use('/menhelyek/new',
         saveMenhelyMW(objRepo),
